@@ -17,5 +17,5 @@ Abre [http://localhost:3000](http://localhost:3000) para verla en el navegador.
 
 Puedes acceder a mi página o formulario en la siguiente URL:
 
-[https://vercel.com/daniels-projects-49aba069/examen-tercera-serie/47VuNdW2s3wMrwV76WtebfB5rT6a]
+[https://examen-tercera-serie.vercel.app/]
 
