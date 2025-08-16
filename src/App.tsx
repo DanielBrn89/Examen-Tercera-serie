@@ -1,9 +1,9 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
-
 
 function App() {
   const [form, setForm] = useState({
+    saludo: '',
     nombre: '',
     apellido: '',
     genero: '',
@@ -25,46 +25,51 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-       <title>Formulario de Registro</title>
-    
-    
-        <h2>Detalles personales</h2>
-       
-        <form onSubmit={handleSubmit} style={{ marginTop: '2rem', textAlign: 'left' }}>
-          <div>
-            <label>Nombre: </label>
-            <input type="text" name="nombre" value={form.nombre} onChange={handleChange} required />
+    <div className="min-vh-100 d-flex justify-content-center align-items-center bg-light">
+      <div className="bg-white p-4 rounded shadow" style={{ minWidth: '350px' }}>
+        <h2 className="text-center mb-4">Detalles personales</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Saludo:</label>
+            <select className="form-select" name="saludo" value={form.saludo} onChange={handleChange} required>
+              <option value="">--NINGUNO--</option>
+              <option value="Sr.">Sr.</option>
+              <option value="Sra.">Sra.</option>
+              <option value="Srta.">Srta.</option>
+            </select>
           </div>
-          <div>
-            <label>Apellido: </label>
-            <input type="text" name="apellido" value={form.apellido} onChange={handleChange} required />
+          <div className="mb-3">
+            <label className="form-label">Nombre:</label>
+            <input type="text" className="form-control" name="nombre" value={form.nombre} onChange={handleChange} required />
           </div>
-          <div>
-            <label>Género: </label>
-            <select name="genero" value={form.genero} onChange={handleChange} required>
+          <div className="mb-3">
+            <label className="form-label">Apellido:</label>
+            <input type="text" className="form-control" name="apellido" value={form.apellido} onChange={handleChange} required />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Género:</label>
+            <select className="form-select" name="genero" value={form.genero} onChange={handleChange} required>
               <option value="">Seleccione</option>
               <option value="Masculino">Masculino</option>
               <option value="Femenino">Femenino</option>
               <option value="Otro">Otro</option>
             </select>
           </div>
-          <div>
-            <label>Fecha de nacimiento: </label>
-            <input type="date" name="fechaNacimiento" value={form.fechaNacimiento} onChange={handleChange} required />
+          <div className="mb-3">
+            <label className="form-label">Fecha de nacimiento:</label>
+            <input type="date" className="form-control" name="fechaNacimiento" value={form.fechaNacimiento} onChange={handleChange} required />
           </div>
-          <div>
-            <label>Email: </label>
-            <input type="email" name="email" value={form.email} onChange={handleChange} required />
+          <div className="mb-3">
+            <label className="form-label">Email:</label>
+            <input type="email" className="form-control" name="email" value={form.email} onChange={handleChange} required />
           </div>
-          <div>
-            <label>Dirección: </label>
-            <input type="text" name="direccion" value={form.direccion} onChange={handleChange} required />
+          <div className="mb-3">
+            <label className="form-label">Dirección:</label>
+            <input type="text" className="form-control" name="direccion" value={form.direccion} onChange={handleChange} required />
           </div>
-          <button type="submit" style={{ marginTop: '1rem' }}>Enviar</button>
+          <button type="submit" className="btn btn-primary">Enviar</button>
         </form>
-      </header>
+      </div>
     </div>
   );
 }
