@@ -12,7 +12,7 @@ En el directorio del proyecto, puedes ejecutar:
 Ejecuta la aplicación en modo desarrollo.\
 Abre [http://localhost:3000](http://localhost:3000) para verla en el navegador.
 
-## imagenes diferentes aplicaciones [public/imagen.png]
+## imagenes diferentes aplicaciones [../public/imagen.png]
 
 
 ## Acceso a la aplicación
